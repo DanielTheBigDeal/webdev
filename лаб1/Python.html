@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Python</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="size.css">
+    <link rel="stylesheet" type="text/css" href="fonts.css">
+    <link rel="stylesheet" href="github-dark-dimmed.min.css">
+    <script src="highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <p style="text-align: center;font-size: 25pt;">Python</p>
+
+    <p >
+        <h3>����������:</h3>
+    </p>
+    <nav>
+        <ul class="al">
+            <li>
+                <a href="#history">������� ��������</a>
+            </li>
+            <li>
+                <a href="#overview">������� ����� �����</a>
+            </li>
+            <li>
+                <a href="#examples">������� ����</a>
+                <ul style="list-style: decimal;">
+                    <li><a href="#e1">������ 1</a></li>
+                    <li><a href="#e2">������ 2</a></li>
+                    <li><a href="#e3">������ 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <article>
+        <h1 id="history">������� ��������</h1>
+        <p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/330px-Python_logo_and_wordmark.svg.png"
+                 alt="python-logo" class="centerimg" style="clip: auto;clip-path: none;height: 50pt;width: 150pt;position: static;"><dfn> Python</dfn> - ��� ��������������� ���� ����������������, ������� ��� ���������� � ����� 1980-� ����� ����� ��� �������� � �����������. ���� ��� ������ � ����� ����������� ����������� ������� <a href="https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus">Monty Python's Flying Circus</a>.
+        </p>
+
+
+        <p class="colorr">������ ������ <span>Python </span>���� �������� � 1991 ����. ���� ��� ������ ��� �������, �� ������ ���������� ��� ����������������, ������� ��� ���� ����������� � ��������� ��������, ������� ���-����������, ������� ���������� � ��������� ����������������.</p>
+        <p class="colorb">Python ������ ���� ���������� ����� ������������� ��������� ����� �������� � �������� �������������. � 2000 ���� ���� �������� ������ Python 2.0, ������� �������� ��������� ����� ������� � ���������.</p>
+        <img class="leftimg" src="python.jpg" width="300"
+             style="margin-right:20px;">
+        <h2 id="overview">������� ����� �����</h2>
+        <img class="rightimg"
+             src="image.jpg"
+             alt="���� ������" width="150">
+        <p class="coloro"><em>Python </em>- ��� ���������������� ���� ����������������, ������� ������������ ��������-���������������, �������������� � ����������� ����������������. ���� ����� ������� � �������� ���������, ��� ������ ��� ��������� ��� �������� � ����������������.</p>
+        <p class="colorg"><strong>Python</strong> ������������ ��� ���������� ���-����������, ������� ����������, ��������� �������� � �������������� ����������. � ����� �������� ��������� ��������� ��������� � �����������, ��� ������ ��� ��� ����� ������������� � ��������������.</p>
+        <p>
+            <table class="t1" summary="������� 1">
+
+                <thead>
+                    <tr>
+                        <th class="trout">�������� �������� �����</th>
+                        <th>�������</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr><th>�������� � ���������� ����������</th><td>print("Hello, world!")</td></tr>
+                    <tr><th>������������ ���������</th><td>x = 5<br>y = "Hello"<br>z = x + y</td></tr>
+                    <tr><th>��������-��������������� ����������������</th><td>class Person:<br>&nbsp;&nbsp;def init(self, name, age):<br>&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>&nbsp;&nbsp;&nbsp;&nbsp;self.age = age<br><br>p = Person("John", 25)</td></tr>
+                </tbody>
+            </table>
+        </p>
+        <h2 id="examples">������� ����</h2>
+        <p>���� ��������� ������� ���� �� Python:</p>
+
+        <h3 id="e1">������ 1: ������ ���������� �����</h3>
+        <pre><code class="language-python">
+    def factorial(n):
+    if n == 0:
+    return 1
+    else:
+    return n * factorial(n-1)
+
+    print(factorial(5)) # �����: 120
+</code>
+</pre>
+
+        <h4 id="e2">������ 2: ����� ����������� ����� � ������</h4>
+        <pre><code class="language-python">
+    numbers = [3, 7, 2, 9, 4]
+
+    max_number = numbers[0]
+    for number in numbers:
+    if number > max_number:
+    max_number = number
+
+    print(max_number) # �����: 9
+</code>
+  </pre>
+        <h3 id="e3">������ 3: �������� �������� ���-�������</h3>
+        <pre><code class="language-python">
+    class MyHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+    self.send_response(200)
+    self.send_header('Content-type', 'text/html')
+    self.end_headers()
+    self.wfile.write(b'Hello, world!')
+
+    server_address = ('', 8000)
+    httpd = HTTP
+    Server(server_address, MyHandler)
+    httpd.serve_forever()
+</code>
+  </pre>
+        <h2>�������������� ���� � CSS-��������</h2>
+        <ol>
+            <li class="columns">
+                ����:1.	DOCTYPE html
+                2.	html
+                3.	head
+                4.	title
+                5.	link
+                6.	script
+                7.	body
+                8.	p
+                9.	span
+                10.	h1
+                11.	h2
+                12.	h4
+                13.	h3
+                14.	nav
+                15.	ul
+                16.	li
+                17.	a
+                18.	article
+                19.	img
+                20.	dfn
+                21.	em
+                22.	strong
+                23.	table
+                24.	thead
+                25.	tr
+                26.	th
+                27.	tbody
+                28.	pre
+                29.	code
+                30.	ol
+            </li>
+            <li class="columns">
+                CSS-��������: 
+                1.	text-indent
+                2.	text-align
+                3.	font-size
+                4.	outline-style
+                5.	outline-offset
+                6.	outline-color
+                7.	outline-width
+                8.	font-family
+                9.	font-style
+                10.	font-weight
+                11.	font-size-adjust
+                12.	font-stretch
+                13.	font-variant
+                14.	font-feature-settings
+                15.	cursor
+                16.	content
+                17.	clear
+                18.	clip
+                19.	clip-path
+                20.	box-shadow
+                21.	list-style-position
+                22.	list-style-image
+                23.	color
+                24.	float
+                25.	max-width
+                26.	margin-right
+                27.	margin
+                28.	white-space
+                29.	vertical-align
+                30.	border-collapse
+                31.	padding
+                32.	background
+                33.	text-transform
+                34.	border-right
+                35.	border-bottom
+                36.	display
+                37.	border-spacing
+                38.	caption-side
+                39.	empty-cells
+                40.	border-left
+            </li>
+        </ol>
+    </article>
+</body>
+
+</html>
