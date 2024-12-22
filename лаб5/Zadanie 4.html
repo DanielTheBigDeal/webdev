@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск самого длинного слова</title>
+</head>
+<body>
+    <script>
+
+        const inputSentence = "У лукоморья дуб зелёный; Златая цепь на дубе том: И днём и ночью кот учёный Всё ходит по цепи кругом.";
+        const longestWord = Longest(inputSentence);
+
+        function Longest(sentence) {
+            const words = sentence.split(' ');
+            let longestWord = '';
+
+            for (const word of words) {
+                const cleanedWord = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/, '');
+
+                if (cleanedWord.length > longestWord.length) {
+                    longestWord = cleanedWord;
+                }
+            }
+            return longestWord;
+        }
+
+        document.write('<p>Исходное предложение: ' + inputSentence + '</p>');
+        document.write('<p>Самое длинное слово: ' + longestWord + '</p>');
+    </script>
+</body>
+</html>

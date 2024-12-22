@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Удаление элементов массива</title>
+</head>
+<body>
+    <script>
+
+        const myArray = [3.14, -7, 42, 0, -12.5, -6, 15.7];
+
+        function extra(num) {
+            for (let i = 2; i < num; i++)
+                if (num % i === 0) return false;
+            return num > 1;
+        }
+
+        function summa(num) {
+            return num.toString().split('').map(Number).reduce((a, b) => a + b, 0);
+        }
+
+        function filterArray(arr) {
+            return arr.filter(num => {
+                const integerPart = Math.abs(Math.trunc(num));
+                const sum = summa(integerPart);
+                return !extra(sum);
+            });
+        }
+
+        const newArray = filterArray(myArray);
+
+        document.write('<p>Исходный массив: ' + myArray.join(', ') + '</p>');
+        document.write('<p>Новый массив: ' + newArray.join(', ') + '</p>');
+    </script>
+</body>
+</html>

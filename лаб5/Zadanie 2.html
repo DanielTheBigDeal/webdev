@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сумма элементов массива</title>
+</head>
+<body>
+    <script>
+
+        const myArray = [-1.8, -1.2, -1.05, 0, 0.7, 1, 1.2, 1.88, 1.9];
+        const resultSum = calculateSum(myArray);
+
+        function calculateSum(arr) {
+            let lastIndex = -1;
+
+            for (let i = 0; i < arr.length; i++) {
+                const element = arr[i];
+                if (Math.cos(element) < 0) {
+                    lastIndex = i;
+                }
+            }
+
+            if (lastIndex === -1) {
+                return 0;
+            }
+
+            let sum = 0;
+            for (let i = 0; i <= lastIndex; i++) {
+                sum += arr[i];
+            }
+
+            return sum;
+        }
+
+        document.write('<p>Исходный массив: ' + myArray.join(', ') + '</p>');
+        document.write('<p>Сумма элементов: ' + resultSum + '</p>');
+    </script>
+</body>
+</html>
