@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация абитуриента</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация абитуриента</h1>
+        <form class="form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" placeholder="Имя" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" placeholder="Телефон" required>
+
+            <label for="address">Адрес:</label>
+            <input type="text" id="address" placeholder="Адрес" required>
+
+            <label for="birthdate">Дата рождения:</label>
+            <input type="date" id="birthdate" placeholder="Дата рождения" required>
+
+            <label for="gender">Пол:</label>
+            <select id="gender" required>
+                <option value="">Выберите пол</option>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+            </select>
+
+            <label for="course">Выберите курс:</label>
+            <input type="number" id="course" min="1" max="5" required>
+
+            <label for="photo">Фото:</label>
+            <input type="file" id="photo" accept="image/" required>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+</body>
+</html>
