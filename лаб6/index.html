@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация абитуриента</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация абитуриента</h1>
+        <form class="form" id="registrationForm">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" placeholder="Имя" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" placeholder="Телефон" required>
+
+            <label for="address">Адрес:</label>
+            <input type="text" id="address" placeholder="Адрес" required>
+
+            <label for="birthdate">Дата рождения:</label>
+            <input type="date" id="birthdate" placeholder="Дата рождения" required>
+
+            <label for="gender">Пол:</label>
+            <select id="gender" required>
+                <option value="">Выберите пол</option>
+                <option value="Мужской">Мужской</option>
+                <option value="Женский">Женский</option>
+            </select>
+
+            <label for="course">Выберите курс:</label>
+            <input type="number" id="course" min="1" max="5" required>
+
+            <label for="photo">Фото:</label>
+            <input type="file" id="photo" accept="image/" required>
+
+            <button type="button" onclick="submitForm()">Зарегистрироваться</button>
+        </form>
+        <br>
+       
+        <div id="output"></div>
+    </div>
+    
+    <script>
+
+
+        function submitForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var address = document.getElementById('address').value;
+            var birthdate = document.getElementById('birthdate').value;
+            var gender = document.getElementById('gender').value;
+            var course = document.getElementById('course').value;
+            var photo = document.getElementById('photo').value;
+
+
+            if (name && email && phone && address && birthdate && gender && course && photo) {
+
+                if (!validateEmail(email)) {
+                    alert('Пожалуйста, введите корректный email в формате Ivan2004@mail.ru.');
+                    return;
+                }
+
+                if (!validatePhone(phone)) {
+                    alert('Пожалуйста, введите корректный номер телефона в формате 88005553535');
+                    return;
+                }
+
+                if (!validateName(name)) {
+                    alert('Пожалуйста, введите корректное имя, используя только символы кириллицы и латиницы.');
+                    return;
+                }
+
+                document.getElementById('registrationForm').reset();
+
+                var outputDiv = document.getElementById('output');
+
+                outputDiv.innerHTML = 'Имя: ' + name + '<br>Email: ' + email + '<br>Телефон: ' + phone +
+                    '<br>Адрес: ' + address + '<br>Дата рождения: ' + birthdate + '<br>Пол: ' + gender +
+                    '<br>Курс: ' + course + '<br>Фото: ' + photo;
+            } else {
+                alert('Пожалуйста, заполните все поля формы.');
+            }
+        }
+
+        function validateName(name) {
+            var re = /^[A-Za-zА-Яа-яЁё\s]+$/;
+            return re.test(name);
+        }
+
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        function validatePhone(phone) {
+            var re = /^\d{11}$/;
+            return re.test(phone);
+        }
+
+    </script>
+</body>
+</html>
