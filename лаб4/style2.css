@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #87CEEB;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100vh;
+}
+
+.pacman {
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid yellow;
+    border-left: 60px solid yellow;
+    border-bottom: 60px solid yellow;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    position: relative;
+}
+
+.missile {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    position: absolute;
+    border-radius: 50%;
+    animation: shoot 2s linear forwards;
+}
+
+.egg {
+    display: block;
+    width: 126px;
+    height: 180px;
+    background-color: #804030;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+
+@keyframes shoot {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(1200px, -100px);
+    }
+}

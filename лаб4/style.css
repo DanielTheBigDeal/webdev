@@ -1,0 +1,88 @@
+.place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white
+}
+.круг {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%
+}
+
+.пусто {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
+.квадрат {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+.четыре {
+    width: 200px;
+    height: 100px;
+    background: red;
+}
+.левый-вверх {
+    width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-right: 100px solid transparent;
+}
+.правый-вверх {
+    width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-left: 100px solid transparent;
+}
+.левый-низ {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid red;
+    border-right: 100px solid transparent;
+}
+
+.правый-низ {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid red;
+    border-left: 100px solid transparent;
+}
+
+.подставка {
+    width: 300px;
+    height: 70px;
+    background: #FF69B4;
+}
+
+.pacman {
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid yellow;
+    border-left: 60px solid yellow;
+    border-bottom: 60px solid yellow;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+.space-invader {
+    box-shadow: 0 0 0 1em red, 0 1em 0 1em red, -2.5em 1.5em 0 .5em red, 2.5em 1.5em 0 .5em red, -3em -3em 0 0 red, 3em -3em 0 0 red, -2em -2em 0 0 red, 2em -2em 0 0 red, -3em -1em 0 0 red, -2em -1em 0 0 red, 2em -1em 0 0 red, 3em -1em 0 0 red, -4em 0 0 0 red, -3em 0 0 0 red, 3em 0 0 0 red, 4em 0 0 0 red, -5em 1em 0 0 red, -4em 1em 0 0 red, 4em 1em 0 0 red, 5em 1em 0 0 red, -5em 2em 0 0 red, 5em 2em 0 0 red, -5em 3em 0 0 red, -3em 3em 0 0 red, 3em 3em 0 0 red, 5em 3em 0 0 red, -2em 4em 0 0 red, -1em 4em 0 0 red, 1em 4em 0 0 red, 2em 4em 0 0 red;
+    background: red;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    margin: 50px 0 70px 65px;
+}
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid blue;
+}
