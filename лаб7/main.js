@@ -6,11 +6,24 @@ function Clear() {
 }
 
 function Equals() {
-    try {
-        display.innerText = eval(display.innerText);
-    } catch (e) {
-        display.innerText = "Error!";
+    let expression = display.innerText;
+
+    if (expression.includes("/0")) {
+        display.innerText = "Ошибка! Деление на ноль.";
+        return;
     }
+
+    let result;
+
+    try {
+        result = Function(`return ${expression};`)();
+        result = Math.round(result * 100) / 100;
+    } catch (e) {
+        display.innerText = "Ошибка! Некорректное выражение.";
+        return;
+    }
+
+    display.innerText = result.toString();
 }
 
 function ClearE() {
